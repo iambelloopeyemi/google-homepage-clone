@@ -1,0 +1,51 @@
+header {
+    margin: 6px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar {
+    margin-left: 32px;
+    margin-right: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+}
+
+.app-launcher > .material-symbols-outlined {
+    padding: 8px;
+    margin: 4px;
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 700,
+    'GRAD' 200,
+    'opsz' 40
+}
+
+.material-symbols-outlined:hover {
+    cursor: pointer;
+}
+
+.profile-avatar {
+    padding: 4px;
+    margin: 4px;
+    display: flex;
+}
+
+.profile-avatar:hover {
+    cursor: pointer;
+}
+
+.profile-avatar img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
