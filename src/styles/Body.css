@@ -1,12 +1,16 @@
+.logo-container {
+    margin-top: 6px;
+}
+
 .logo {
     margin: auto;
 }
 
 .search-section {
-    /* margin: 20px auto 0; */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 }
 
 .search-field-wrapper {
@@ -15,21 +19,27 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid rgba(128, 128, 128, 0.5);
+    border: 1px solid var(--border-color);
     border-radius: 50px;
+    margin-top: 6px;
+}
+
+.search-field-wrapper:hover {
     z-index: 1;
-    box-shadow: 5px;
+    outline: 2px solid var(--outline-color);
 }
 
 .search-field {
     width: 443px;
     height: 27px;
     border: none;
-    outline: none;  
+    outline: none;
+    font-size: 16px;
+    color:var(--search-field-color);
 }
 
 .search-field-wrapper > .material-symbols-outlined {
-    color: rgba(128, 128, 128, 0.8);;
+    color: var(--google-material-icon-color);
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
@@ -37,36 +47,76 @@
     'opsz' 20
 }
 
+.search-icon {
+    cursor: default;
+}
+
 .google-mic-icon, .google-lens-icon {
     width: 32px;
     height: 32px;
 }
 
-.btn-container {
+.google-mic-icon:hover, .google-lens-icon {
+    cursor: pointer;
+}
+
+.btn-section {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     gap: 10px;
+    margin-top: 20px;
 }
 
 .first-btn {
+    background-color: var(--button-background-color);
+    border: none;
+    outline: none;
     width: 127px;
     height: 36px;
+    font-size: 14px;
+    color: var(--button-color);
 }
 
 .second-btn {
+    background-color: var(--button-background-color);
+    border: none;
     width: 143px;
     height: 36px;
+    font-size: 14px;
+    color: var(--button-color);
 }
 
-.languages-wrapper {
-    background-color: aqua;
+.first-btn:hover, .second-btn:hover {
+    cursor: pointer;
+    outline: 2px solid var(--button-background-color);
+    z-index: 1;
+}
+
+.languages-section {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-top: 15px;
+}
+
+.languages-offering {
+    font-size: 13px;
+    color: var(--languages-offering-color);
+}
+
+.languages-options {
+    display: flex;
+    align-items: center;
 }
 
 .language {
-    margin-right: 5px;
+    font-size: 13px;
+    color: var(--language-color);
+    margin-right: 10px;
+}
+
+.language:hover {
+    text-decoration: underline;
 }

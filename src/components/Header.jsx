@@ -1,18 +1,18 @@
 import React from 'react'
-import Avatar from '../assets/profile-avatar.png'
+import Avatar from '../assets/user-avatar.png'
 import '../styles/Header.css'
 
-const NavItem = ({ title }) => {
+const Nav = ({ title }) => {
   return (
-    <div className="nav-item"> 
-      <a href="#">{title}</a>
+    <div className='nav'> 
+      <a href="#" className='nav-link'>{title}</a>
     </div>
   )
 }
 
-const AppLauncher = () => {
+const GoogleApps = () => {
   return (
-    <div className="app-launcher">
+    <div className='google-apps'>
       <i className="material-symbols-outlined">apps</i>
     </div>
   )
@@ -20,8 +20,8 @@ const AppLauncher = () => {
 
 const UserAvatar = () => {
   return (
-    <div className="profile-avatar">
-      <img src={Avatar} alt="profile avatar" />
+    <div className="user-avatar">
+      <img src={Avatar} alt="User Avatar" className='avatar' />
     </div>
   )
 }
@@ -29,12 +29,12 @@ const UserAvatar = () => {
 const Header = () => {
   return (
     <header>
-      <div className="navbar">
-        <NavItem title="Gmail" />
-        <NavItem title="Images" />
-        <AppLauncher />
+      <nav>
+        <Nav title='Gmail' />
+        <Nav title='Images' />
+        <GoogleApps />
         <UserAvatar />
-      </div>
+      </nav>
     </header>
   )
 }

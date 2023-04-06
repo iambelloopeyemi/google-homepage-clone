@@ -1,69 +1,49 @@
 import React from 'react'
 import Leaf from '../assets/leaf.png'
+import '../styles/Footer.css'
 
-const FirstFooterSection = ( {location} ) => {
+const Location = ( {location} ) => {
     return (
-        <div>
-            {location}
+        <div className='location-section'>
+            <p className='location'>{location}</p>
         </div>
     )
 }
 
-const LeftBottomFooterLinks = ( {aLink, bLink, cLink, dLink} ) => {
+const bottomLeftList = ['About', 'Advertising', 'Business', 'How Search works'];
+const bottomRightList = ['Privacy', 'Terms', 'Settings'];
+
+const bottomLeftLinks = bottomLeftList.map((link, index) => {
+    return <li key={index}><a href="#" className='link'>{link}</a></li>
+});
+const bottomRightLinks = bottomRightList.map((link, index) => {
+    return <li key={index}><a href="#" className='link'>{link}</a></li>
+});
+
+const Links = () => {
     return (
-        <div>
-            <div>
-                <a href="#">{aLink}</a>
-                <a href="#">{bLink}</a>
-                <a href="#">{cLink}</a>
-                <a href="#">{dLink}</a>
+        <div className='links-section'>
+            <div className='bottom-left-links-container'>
+                <ul className='bottom-left-links-wrapper'>{bottomLeftLinks}</ul>
             </div>
-        </div>
-    )
-}
-
-const MiddleBottomFooterLinks = ( {link} ) => {
-    return (
-        <div>
-            <div>
-                <img src={Leaf} alt="leaf" />
-                <a href="#">{link}</a>
+            <div className='middle-links-container'>
+                <img src={Leaf} alt="Leaf" className='leaf' />
+                <a href="#" className='link'>Carbon neutral since 2007</a>
             </div>
-        </div>
-    )
-}
-
-const RightBottomFooterLinks = ( {aLink, bLink, cLink, dLink} ) => {
-    return (
-        <div>
-            <div>
-                <a href="#">{aLink}</a>
-                <a href="#">{bLink}</a>
-                <a href="#">{cLink}</a>
+            <div className='bottom-right-links-container'>
+                <ul className='bottom-right-links-wrapper'>{bottomRightLinks}</ul>
             </div>
-        </div>
-    )
-}
-
-const SecondFooterSection = () => {
-    return (
-        <div>
-            <LeftBottomFooterLinks aLink="About" bLink="Advertising" 
-            cLink="Business" dLink="How Search works" />
-            <MiddleBottomFooterLinks link="Carbon neutral since 2007" />
-            <RightBottomFooterLinks aLink="Privacy" bLink="Terms" 
-            cLink="Settings" />
         </div>
     )
 }
 
 const Footer = () => {
-  return (
-    <footer>
-        <FirstFooterSection location="Nigeria" />
-        <SecondFooterSection />
-    </footer>
-  )
+    return (
+        <footer>
+          <Location location="Nigeria" />
+          <Links />
+        </footer>
+    )
 }
 
 export default Footer

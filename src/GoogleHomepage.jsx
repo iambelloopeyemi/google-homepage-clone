@@ -1,13 +1,12 @@
-import { useState } from 'react'
-import './App.css'
+{/*import { useState } from 'react'*/}
 import Header from './components/Header'
 import Body from './components/Body'
 import Footer from './components/Footer'
 
-function App() {
+function GoogleHomepage() {
 
   return (
-    <div>
+    <div className='body'>
       <Header />
       <Body />
       <Footer />
@@ -15,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+export default GoogleHomepage

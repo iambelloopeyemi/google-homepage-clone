@@ -1,0 +1,48 @@
+:root {
+  --nav-color: rgba(0, 0, 0, 0.87);
+  --google-material-icon-color: rgba(95, 99, 104, 1);
+  --border-color: rgba(28, 29, 31, 0.2);
+  --outline-color: rgba(28, 29, 31, 0.1);
+  --search-field-color: rgba(0, 0, 0, 0.87);
+  --button-background-color: rgba(246, 247, 248, 1);
+  --button-color: rgba(32, 33, 36, 0.8);
+  --languages-offering-color: rgba(77, 81, 86, 1);
+  --language-color: rgba(26, 13, 171, 1);
+  --footer-background-color: rgba(242, 242, 242, 1);
+  --footer-color: rgba(112, 117, 122, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+}
+
+ul, 
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button {
+  font-family: inherit;
+}

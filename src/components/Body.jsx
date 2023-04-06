@@ -4,64 +4,59 @@ import GoogleMicIcon from '../assets/google-mic-icon.png'
 import GoogleLensIcon from '../assets/google-lens-icon.png'
 import '../styles/Body.css'
 
-const Logo = () => {
+const LogoSection = () => {
   return (
-    <div>
-      <img src={GoogleLogo} alt="google logo" className="logo" />
+    <div className='logo-container'>
+      <img src={GoogleLogo} alt="Google Logo" className='logo' />
     </div>
-  )
-}
-
-const SearchField = () => {
-  return (
-      <form action="#" className="search-field-wrapper" >
-          <i className="material-symbols-outlined">search</i>
-          <input type="search" className="search-field" />
-          <img src={GoogleMicIcon} alt="google mic icon" className="google-mic-icon" />
-          <img src={GoogleLensIcon} alt="google mic icon" className="google-lens-icon" />
-      </form>
   )
 }
 
 const SearchSection = () => {
   return (
-    <div className="search-section">
-      <SearchField />
+    <div className='search-section'>
+      <form action="#" className='search-field-wrapper' >
+        <i className="material-symbols-outlined search-icon">search</i>
+        <input type='search' className='search-field' />
+        <img src={GoogleMicIcon} alt="Google Mic Icon" className='google-mic-icon' />
+        <img src={GoogleLensIcon} alt="Google Mic Icon" className='google-lens-icon' />
+      </form>
+      </div>
+  )
+}
+
+const ButtonSection = ( {FirstButtonTitle, SecondButtonTitle } ) => {
+  return (
+    <div className='btn-section'>
+      <button className='first-btn'>{FirstButtonTitle}</button>
+      <button className='second-btn'>{SecondButtonTitle}</button>
     </div>
   )
 }
 
-const Button = ( {FirstButtonTitle, SecondButtonTitle } ) => {
-  return (
-    <div className="btn-container">
-      <button className="first-btn">{FirstButtonTitle}</button>
-      <button className="second-btn">{SecondButtonTitle}</button>
-    </div>
-  )
-}
+const languages = ['Hausa', 'Igbo', 'Èdè Yorùbá', 'Nigeria Pidgin'];
 
-const Languages = () => {
+const languagesOptions = languages.map((language, index) => {
+  return <li key={index}><a href="#" className='language'>{language}</a></li>
+});
+
+const LanguagesSection = () => {
   return (
-    <div className="languages-wrapper"> 
-      <p>Google offered in:</p>
-      <span className="languages">
-          <a href="#" className="language">Hausa</a>
-          <a href="#" className="language">Igbo</a>
-          <a href="#" className="language">Ede Yoruba</a>
-          <a href="#" className="language">Nigeria Pidgin</a>
-        </span>
+    <div className='languages-section'> 
+      <p className='languages-offering'>Google offered in:</p>
+      <ul className='languages-options'>{languagesOptions}</ul>
     </div>
   )
 }
 
 const Body = () => {
   return (
-    <div>
-      <Logo />
+    <main>
+      <LogoSection />
       <SearchSection />
-      <Button FirstButtonTitle="Google Search" SecondButtonTitle="I'm Feeling Lucky" />
-      <Languages />
-    </div>
+      <ButtonSection FirstButtonTitle='Google Search' SecondButtonTitle="I'm Feeling Lucky" />
+      <LanguagesSection />
+    </main>
   )
 }
 
