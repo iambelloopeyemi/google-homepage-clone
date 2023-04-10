@@ -22,15 +22,18 @@
     border: 1px solid var(--border-color);
     border-radius: 50px;
     margin-top: 6px;
-    position: relative;
 }
 
-.search-data-container {
-    width: 582px;
-    height: 1000px;
+.search-result-container {
+    width: 552px;
+    height: 20px;
     overflow: hidden;
+    z-index: 1;
     position: absolute;
-    top: 0;
+    top: 35%;
+    background-color: whitesmoke;
+    padding-left: 28px;
+    border-radius: 0 0 20px 20px;
 }
 
 .search-field-wrapper:hover {

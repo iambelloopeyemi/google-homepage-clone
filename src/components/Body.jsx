@@ -14,13 +14,33 @@ const LogoSection = () => {
 }
 
 const SearchBar = () => {
+  const [keywords, setKeywords] = useState('');
+  const [result, setResult] = useState('');
+
+  const handleKeywordChange = (event) => {
+    const searchKeyword = event.target.value;
+    setKeywords(searchKeyword);
+  }
+
+  const handleKeyDown = (event) => {
+    if (event.key == 'Enter') {
+      setResult(keywords);
+    } 
+  }
+
   return (
-    <form action="#" className='search-field-wrapper' >
-      <i className="material-symbols-outlined search-icon">search</i>
-      <input type='search' className='search-field' />
-      <img src={googleMicIcon} alt="Google Mic Icon" className='google-mic-icon' />
-      <img src={googleLensIcon} alt="Google Mic Icon" className='google-lens-icon' />
-    </form>
+    <div className='search-field-container'>
+      <form action="#" className='search-field-wrapper' >
+        <i className="material-symbols-outlined search-icon">search</i>
+        <input type='search' className='search-field'
+          value={keywords} onChange={handleKeywordChange} onKeyDown={handleKeyDown}/>
+        <img src={googleMicIcon} alt="Google Mic Icon" className='google-mic-icon' />
+        <img src={googleLensIcon} alt="Google Mic Icon" className='google-lens-icon' />
+        <div className='search-result-container'>
+          <p className='search-result'>{result}</p>
+        </div>
+      </form>
+    </div>
   )
 }
 

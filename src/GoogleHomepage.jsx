@@ -6,7 +6,7 @@ import Footer from './components/Footer'
 function GoogleHomepage() {
 
   return (
-    <div className='body'>
+    <div>
       <Header />
       <Body />
       <Footer />
