@@ -43,7 +43,7 @@ footer {
     gap: 15px;
 }
 
-.middle-links-container {
+.middle-link-container {
     display: flex;
     align-items: center;
     gap: 6px;

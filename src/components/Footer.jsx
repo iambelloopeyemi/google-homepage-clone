@@ -1,5 +1,7 @@
 import React from 'react'
-import Leaf from '../assets/leaf.png'
+import { footerLinks } from './List'
+import { legalAndSettings } from './List'
+import leaf from '../assets/leaf.png'
 import '../styles/Footer.css'
 
 const Location = ( {location} ) => {
@@ -10,29 +12,45 @@ const Location = ( {location} ) => {
     )
 }
 
-const bottomLeftList = ['About', 'Advertising', 'Business', 'How Search works'];
-const bottomRightList = ['Privacy', 'Terms', 'Settings'];
+const FooterLeftLinks = () => {
+    const footerLeft = footerLinks.map((link, index) => {
+        return <li key={index}><a href="#" className='link'>{link}</a></li>
+    });
 
-const bottomLeftLinks = bottomLeftList.map((link, index) => {
-    return <li key={index}><a href="#" className='link'>{link}</a></li>
-});
-const bottomRightLinks = bottomRightList.map((link, index) => {
-    return <li key={index}><a href="#" className='link'>{link}</a></li>
-});
+    return (
+        <div className='bottom-left-links-container'>
+            <ul className='bottom-left-links-wrapper'>{footerLeft}</ul>
+        </div>
+    )
+}
+
+const FooterMiddleLink = ( {title} ) => {
+    return (
+        <div className='middle-link-container'>
+            <img src={leaf} alt="Leaf" className='leaf' />
+            <a href="#" className='link'>{title}</a>
+        </div>
+    )
+}
+
+const FooterRightLinks = () => {
+    const footerRight = legalAndSettings.map((link, index) => {
+        return <li key={index}><a href="#" className='link'>{link}</a></li>
+    });
+
+    return (
+        <div className='bottom-right-links-container'>
+            <ul className='bottom-right-links-wrapper'>{footerRight}</ul>
+        </div>
+    )
+}
 
 const Links = () => {
     return (
         <div className='links-section'>
-            <div className='bottom-left-links-container'>
-                <ul className='bottom-left-links-wrapper'>{bottomLeftLinks}</ul>
-            </div>
-            <div className='middle-links-container'>
-                <img src={Leaf} alt="Leaf" className='leaf' />
-                <a href="#" className='link'>Carbon neutral since 2007</a>
-            </div>
-            <div className='bottom-right-links-container'>
-                <ul className='bottom-right-links-wrapper'>{bottomRightLinks}</ul>
-            </div>
+            <FooterLeftLinks />
+            <FooterMiddleLink title='Carbon neutral since 2007' /> 
+            <FooterRightLinks />
         </div>
     )
 }
@@ -40,7 +58,7 @@ const Links = () => {
 const Footer = () => {
     return (
         <footer>
-          <Location location="Nigeria" />
+          <Location location='Nigeria' />
           <Links />
         </footer>
     )

@@ -17,7 +17,7 @@ nav {
 }
 
 .nav-link {
-    font-size: 13px;
+    font-size: small;
     color: var(--nav-color);
 }
 
