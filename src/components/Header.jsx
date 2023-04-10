@@ -1,5 +1,5 @@
 import React from 'react'
-import Avatar from '../assets/user-avatar.png'
+import avatar from '../assets/user-avatar.png'
 import '../styles/Header.css'
 
 const Nav = ({ title }) => {
@@ -21,7 +21,7 @@ const GoogleApps = () => {
 const UserAvatar = () => {
   return (
     <div className="user-avatar">
-      <img src={Avatar} alt="User Avatar" className='avatar' />
+      <img src={avatar} alt="User Avatar" className='avatar' />
     </div>
   )
 }
