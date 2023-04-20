@@ -1,60 +1,56 @@
 header {
-    margin: 6px;
-    display: flex;
-    justify-content: flex-end;
+  margin: 6px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 nav {
-    margin-left: 32px;
-    margin-right: 4px;
-    display: flex;
-    align-items: center;
+  margin-left: 32px;
+  margin-right: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .nav {
-    margin-left: 12px;
-    margin-right: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .nav-link {
-    font-size: small;
-    color: var(--nav-color);
+  font-size: small;
+  color: var(--nav-color);
 }
 
 .nav-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .google-apps > .material-symbols-outlined {
-    padding: 8px;
-    margin: 4px;
-    color: var(--google-material-icon-color);
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 700,
-    'GRAD' 200,
-    'opsz' 40
+  padding: 8px;
+  margin: 4px;
+  color: var(--google-material-icon-color);
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 200, "opsz" 40;
 }
 
 .google-apps > .material-symbols-outlined:hover {
-    cursor: pointer;
-    outline: 1px solid var(--outline-color);
-    border-radius: 50%;
+  cursor: pointer;
+  outline: 1px solid var(--outline-color);
+  border-radius: 50%;
 }
 
 .user-avatar {
-    padding: 4px;
-    margin: 4px;
+  padding: 4px;
+  margin: 4px;
 }
 
 .user-avatar:hover {
-    cursor: pointer;
-    outline: 2px solid var(--outline-color);
-    border-radius: 50%;
+  cursor: pointer;
+  outline: 2px solid var(--outline-color);
+  border-radius: 50%;
 }
 
 .avatar {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
 }

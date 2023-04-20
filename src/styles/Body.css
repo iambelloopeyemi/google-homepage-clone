@@ -1,125 +1,131 @@
 .logo-container {
-    margin-top: 6px;
+  margin-top: 6px;
 }
 
 .logo {
-    margin: auto;
+  margin: auto;
 }
 
 .search-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .search-field-wrapper {
-    width: 582px;
-    height: 46px; 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid var(--border-color);
-    border-radius: 50px;
-    margin-top: 6px;
-}
-
-.search-result-container {
-    width: 552px;
-    height: 20px;
-    overflow: hidden;
-    z-index: 1;
-    position: absolute;
-    top: 35%;
-    background-color: whitesmoke;
-    padding-left: 28px;
-    border-radius: 0 0 20px 20px;
+  width: 582px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  margin-top: 6px;
+  z-index: 2;
 }
 
 .search-field-wrapper:hover {
-    z-index: 1;
-    outline: 2px solid var(--outline-color);
+  outline: 2px solid var(--outline-color);
+  z-index: 2;
 }
 
 .search-field {
-    width: 443px;
-    height: 27px;
-    border: none;
-    outline: none;
-    font-size: 16px;
-    color:var(--search-field-color);
+  width: 443px;
+  height: 27px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: var(--search-field-color);
 }
 
 .search-field-wrapper > .material-symbols-outlined {
-    color: var(--google-material-icon-color);
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 20
+  color: var(--google-material-icon-color);
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 20;
 }
 
 .search-icon {
-    cursor: default;
+  cursor: default;
 }
 
-.google-mic-icon, .google-lens-icon {
-    width: 32px;
-    height: 32px;
+.google-mic-icon,
+.google-lens-icon {
+  width: 32px;
+  height: 32px;
 }
 
-.google-mic-icon:hover, .google-lens-icon {
-    cursor: pointer;
+.google-mic-icon:hover,
+.google-lens-icon {
+  cursor: pointer;
+}
+
+.search-result-container {
+  width: 548px;
+  height: max-content;
+  overflow: hidden;
+  z-index: 1;
+  position: absolute;
+  top: 34.5%;
+  left: 30%;
+  background-color: white;
+  padding-left: 28px;
+  border-top: 1px solid var(--border-color);
+  border-radius: 0 0 20px 20px;
+}
+
+.search-result {
+    font-size: medium;
+    margin: 5px;
 }
 
 .btn-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .btn {
-    background-color: var(--button-background-color);
-    border: none;
-    outline: none;
-    width: 127px;
-    height: 36px;
-    font-size: 14px;
-    color: var(--button-color);
+  background-color: var(--button-background-color);
+  border: none;
+  outline: none;
+  width: 127px;
+  height: 36px;
+  font-size: 14px;
+  color: var(--button-color);
 }
 
 .btn:hover {
-    cursor: pointer;
-    outline: 2px solid var(--button-background-color);
-    z-index: 1;
+  cursor: pointer;
+  outline: 2px solid var(--button-background-color);
+  z-index: 1;
 }
 
 .languages-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .languages-offering {
-    font-size: 13px;
-    color: var(--languages-offering-color);
+  font-size: 13px;
+  color: var(--languages-offering-color);
 }
 
 .languages-options {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .language {
-    font-size: 13px;
-    color: var(--language-color);
-    margin-right: 10px;
+  font-size: 13px;
+  color: var(--language-color);
+  margin-right: 10px;
 }
 
 .language:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
